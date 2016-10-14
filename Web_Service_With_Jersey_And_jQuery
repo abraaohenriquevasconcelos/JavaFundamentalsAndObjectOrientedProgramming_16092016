@@ -1,0 +1,53 @@
+Links:
+http://bl.ocks.org/Jverma/887877fc5c2c2d99be10
+https://jersey.java.net/documentation/latest/getting-started.html
+https://translate.google.com.br/translate?hl=pt-BR&sl=en&u=https://jersey.java.net/documentation/latest/getting-started.html&prev=search
+
+http://javafree.uol.com.br/artigo/885276/Introducao-pratica-a-REST-Web-Services-com-Java-usando-RESTEasy.html
+
+https://mvnrepository.com/artifact/com.sun.jersey/jersey-json/1.19
+
+https://www.youtube.com/watch?v=2rZiMjIhhW8
+
+1)Características de um web service RESTful
+
+O principal em um restful web service são as URLs do sistema (geralmente são referidas como restful URIS),
+e os resources. Um resource é um recurso, uma entidade, ou seja, é um objeto com informação que será represen-
+tado por meio de um XML. Em geral, a URL para acessar esse recurso será sempre a mesma, porém caso mudemos o
+método HTTP o resultado da requisição será diferente.
+GET -> lista os recursos -> detalhes de um recurso
+POST -> adiciona um recurso -
+PUT -> atualiza um recurso
+DELETE ->
+
+Porém saiba que no REST não existe um padrão definido, as operações listas acima são apenas sugestão. 
+
+
+2)JAX-RS e Jersey
+O JAX-RS é uma especificação (a JSR-311) que define a criação de um WebService com arquitetura RESTful.
+Na sua API, são utilizadas anotações, que simplificam a necessidade extra de configurações. Atualmente, o
+JAX-RS é parte integrante do Java EE.
+
+Como o JAX-RS é apenas uma especificação, é necessário escolher uma implementação. Entre os projetos que o
+implementam, temos o Jersey, que é open source e mantido pela Oracle, e que é a implementação de referência
+do JAX-RS.
+
+3)Configurando o ambiente
+asm.jar
+jersey-core
+jersey-server
+jsr311-api
+
+Estes são os jars obrigatórios em qualquer projeto utilizando o Jersey.
+
+4)Let's learn on how(sobre como) to get started building RESTful services using Jersey. The example described
+here uses the lightweight Grizzly HTTP server. At the end of this chapter you will see how to implement 
+equivalent functionality as a JavaEE web application you can deploy(implantar) on any servlet container 
+supporting Servlet 2.5 and higher.
+
+Jersey project is built using Apache Maven software project build and management tool. All modules produced 
+as part of Jersey project build are pushed to the Maven Repository
+
+No caso do JAX-RS, para rodar o nosso web service RESTful é necessário um Web Container. Utilizaremos
+Tomcat, porém poderia ser qualquer outro WebContainer como o Jetry, ou mesmo um servicor de aplicação Java EE
+como o Glassfish ou o JBoss.
