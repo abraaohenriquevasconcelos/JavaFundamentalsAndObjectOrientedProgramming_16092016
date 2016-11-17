@@ -1,1 +1,0 @@
-1)SAXReader creates a DOM4J tree from SAX parsing events (SAXReader cria uma árvore dom4j de eventos SAX análise.)
