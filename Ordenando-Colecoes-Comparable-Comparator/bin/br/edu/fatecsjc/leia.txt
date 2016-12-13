@@ -1,0 +1,53 @@
+1) Para ordenar uma lista ou um array a API "Collections" do Java tem a solução.
+
+Imagine que você gostaria de ordenar uma lista de contas bancárias. Cada conta possui
+um número (int) e um titular (String):
+
+Conta conta1 = new Conta(5452, "Phillip Lahm");
+Conta conta2 = new Conta(1234, "Lucas Podolski");
+Conta conta3 = new Conta(3145, "Arne Friedrich");
+ 
+List<Conta> lista = new ArrayList<Conta>();
+lista.add(conta1);
+lista.add(conta2);
+lista.add(conta3);
+
+O método para ordenar um lista se encontra na classe java.util.Collections. Essa classe
+possui métodos estáticos que ajudam a manipular coleções, entre eles o método sort. Assim
+podemos tentar ordenar a lista de contas:
+
+Collections.sort(lista);
+
+Mas infelizmente a linha acima nem compila. Antes de invocar o método sort é preciso 
+definir o critério de ordenação: uma forma de informar, dado duas contas, qual vem "antes"
+e qual vem "depois". Considerando que queremos ordenar pelo número da conta, a classe
+Conta deve implementar a interface java.lang.Comparable que define o que será nossa 
+"ordem natural". A interface possui apenas um método compareTo:
+
+public interface Comparable<T>{
+	int compareTo(T outro);
+}
+
+As contas então devem ser comparáveis. Vamos definir a ordem natural baseada no número da conta:
+
+public class Conta implements Comparable<Conta>{
+	private int numero;
+	private String titular;
+	
+	public int compareTo(Conta outraConta){
+		if(this.numero < outraConta.numero){
+			return -1;
+		}
+		if(this.numero > outraConta.numero){
+			return 1;
+		}
+		return 0
+	}
+}
+Se o número da conta atual é menor do que da outraConta retornameros -1 indicando que 
+this deve vir "antes", se for maior retornamos 1 
+
+Agora podemos invocar Collections.sort(lista);
+
+
+2)Mas 
