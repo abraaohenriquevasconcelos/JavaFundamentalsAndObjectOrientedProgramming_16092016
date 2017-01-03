@@ -1,4 +1,4 @@
-package parte1;
+package parte2;
 
 public abstract class Funcionario {
 	protected String nome;

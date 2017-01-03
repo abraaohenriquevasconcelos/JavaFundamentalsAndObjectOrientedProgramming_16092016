@@ -1,4 +1,4 @@
-package parte1;
+package parte2;
 
 public class Relatorios {
 
@@ -12,11 +12,5 @@ public class Relatorios {
 		vendedor.calcularSalario();
 		System.out.println("Nome: "+vendedor.getNome());
 		System.out.println("Salário: "+vendedor.getSalario());
-	}
-	
-	public void relatorioPagamentoGenerico(Funcionario funcionario){
-		funcionario.calcularSalario();
-		System.out.println("Nome: "+funcionario.getNome());
-		System.out.println("Salário: "+funcionario.getSalario());
 	}
 }

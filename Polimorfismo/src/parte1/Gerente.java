@@ -1,4 +1,4 @@
-package parte1;
+package parte2;
 
 public class Gerente extends Funcionario{
 

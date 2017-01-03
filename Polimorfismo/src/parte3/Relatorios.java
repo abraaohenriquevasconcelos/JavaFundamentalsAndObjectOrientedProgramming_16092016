@@ -1,4 +1,4 @@
-package parte1;
+package parte3;
 
 public class Relatorios {
 
@@ -18,5 +18,13 @@ public class Relatorios {
 		funcionario.calcularSalario();
 		System.out.println("Nome: "+funcionario.getNome());
 		System.out.println("Salário: "+funcionario.getSalario());
+		
+		if(funcionario instanceof Gerente){
+			//se o objeto que a variável de referência "funcionario" aponta é um gerente vai passar no if
+			System.out.println("PNL: "+((Gerente) funcionario).getPnl());
+		}
+		if(funcionario instanceof Vendedor){
+			System.out.println("Total das Vendas: "+((Vendedor) funcionario).getTotalVendas());
+		}
 	}
 }

@@ -1,10 +1,10 @@
-package parte1;
+package parte3;
 
 public class Testes {
 
 	public static void main(String[] args) {
-		Gerente gerente = new Gerente("zé", 4000.10, 500.10);
-		Vendedor vendedor = new Vendedor("Jão", 807.3, 433.3);
+		Gerente gerente = new Gerente("zé",3000.0, 1000.10);
+		Vendedor vendedor = new Vendedor("Jão", 800.0, 400.0);
 		
 		/*************************************************************************************
 		 **************************************************************************************/
@@ -26,7 +26,7 @@ public class Testes {
 		
 		/*************************************************************************************
 		 **************************************************************************************/
-		relatorio.relatorioPagamentoGenerico(gerente);
+		relatorio.relatorioPagamentoGenerico(vendedor);
 		//relatorio.relatorioPagamentoVendedor(vendedor);
 		
 	}

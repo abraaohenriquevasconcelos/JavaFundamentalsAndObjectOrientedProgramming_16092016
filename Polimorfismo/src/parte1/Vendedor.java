@@ -1,4 +1,4 @@
-package parte1;
+package parte2;
 
 public class Vendedor extends Funcionario{
 	private double totalVendas;
