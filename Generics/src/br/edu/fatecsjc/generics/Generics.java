@@ -39,10 +39,11 @@ public class Generics {
 		/*
 		 consultarAnimaisLista(listaCachorros);
 		 consultarAnimaisLista(listaGatos);
-		 Se passarmos a lista de Gatos para o método consultarAnimaisLista vamos ter um erro em tempo 
+		 Se passarmos a lista de Gatos ou de cachorros para o método consultarAnimaisLista vamos ter um erro em tempo 
 		 de compilação. Porque quando trabalhamos com listas precisamos passar o mesmo tipo de dados.
 		 Mesmo subclasses não valem. 
-		 consultarAnimaisLista(listaGatos); 
+		 consultarAnimaisLista(listaGatos); //ERRO
+		 consultarAnimaisLista(listaCachorros); //ERRO
 		 */
 		
 		List<Animal> animaisGeraisLista = new ArrayList<>();
@@ -56,7 +57,7 @@ public class Generics {
 		 ************************************************************************************************** 
 		 */
 		
-		//LISTA CORINGA
+		//LISTA CORINGA List<? extends Animal>
 		
 		consultarAnimaisListaCaracterCoringa(listaCachorros);
 	}
