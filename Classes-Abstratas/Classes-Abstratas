@@ -1,0 +1,19 @@
+public abstract class Funcionario{
+    ...
+}
+
+***Classes abstratas só podem ser estendidas, não podemos instanciar uma classe abstrata***
+public class Gerente implements Funcionario{
+    ...
+}
+
+Não podemos colocar "final" numa classe abstrata, pois uma classe com "final" não pode ser extendida
+public final abstract class Funcionario{
+    ...
+}
+
+Um método "abstrato" é obrigatório ser implementado nas subclasses, quando você criar um método abstrato é obrigatório
+que a classe também seja abstrata:
+public abstract class Funcionario{
+    public abstract void calculaSalario();
+}
