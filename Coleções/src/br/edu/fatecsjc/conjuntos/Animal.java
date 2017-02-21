@@ -18,6 +18,14 @@ public class Animal implements Comparable<Animal>{
 
 
 	@Override
+	public String toString() {
+		return "Animal [nome=" + nome + ", especie=" + especie + ", apelido=" + apelido + "]";
+	}
+
+
+
+
+	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
